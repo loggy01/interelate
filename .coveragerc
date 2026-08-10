@@ -1,0 +1,11 @@
+[run]
+branch = True
+source = interelate
+relative_files = True
+
+[report]
+fail_under = 100
+precision = 2
+show_missing = True
+skip_covered = True
+skip_empty = True

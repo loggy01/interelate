@@ -1,0 +1,81 @@
+name: inteRelate-CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  latest-dependencies:
+    name: Latest - ${{ matrix.os }} - Python ${{ matrix.python }}
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - macos-latest
+          - windows-latest
+        python:
+          - "3.12"
+          - "3.13"
+          - "3.14"
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python }}
+
+      - name: Install package in editable mode
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[test]"
+
+      - name: Check dependencies
+        run: python -m pip check
+
+      - name: Run tests
+        run: python -m pytest
+
+  minimum-dependencies:
+    name: Minimum - ${{ matrix.os }} - Python 3.12
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - macos-latest
+          - windows-latest
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Install minimum dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "absl-py==2.0.0" "numpy==1.26.0" "scipy==1.15.0" "pyranges1==1.3.0" "statsmodels==0.14.0" "pytest==8.0.0" "pytest-cov==5.0.0"
+
+      - name: Install package in editable mode without replacing minimums
+        run: python -m pip install --no-deps -e .
+
+      - name: Check dependencies
+        run: python -m pip check
+
+      - name: Run tests
+        run: python -m pytest
