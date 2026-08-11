@@ -6,7 +6,7 @@ build-backend = 'setuptools.build_meta'
 name = 'interelate'
 description = 'Comparative, distance-aware genomic overlap testing between reference and query BED files.'
 keywords = ['bioinformatics', 'BED', 'overlap', 'comparison', 'association']
-version = '1.0.0'
+version = '1.0.0.post1'
 authors = [{name = 'Aaron Mamane-Logsdon', email = 'aaron.logsdon19@imperial.ac.uk'}]
 maintainers = [{name = 'Aaron Mamane-Logsdon', email = 'aaron.logsdon19@imperial.ac.uk'}]
 readme = 'README.md'
