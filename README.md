@@ -69,7 +69,7 @@ Further information about the test suite is available [here](test/README.md).
 
 ## 2. Usage
 
-To run inteRelate, activate its conda environment and execute the `interelate` command as follows:
+To run inteRelate, activate its virtual environment and then execute the `interelate` command as follows:
 
 ```bash
 interelate \
