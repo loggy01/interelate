@@ -89,6 +89,10 @@ interelate \
 
 The `...` in the command are to be replaced by your own input. Here are your options:
 
+<details>
+
+<summary>Argument options</summary>
+
 <dl style="margin-left: 2ch;">
   <dt><code>--reference_dir</code>:</dt>
   <dd>A path to a directory containing your reference BED files. At least two files must be found. Standard BED3 through BED12 files are accepted. The recognised file extensions are .bed, .bed.gz, .txt, and .txt.gz.
@@ -139,6 +143,8 @@ The `...` in the command are to be replaced by your own input. Here are your opt
   </dd>
 </dl>
 
+</details>
+
 ## 3. Results
 
 inteRelate stores the results of a successful run within the user-provided output directory. For example, if a user provided three reference BED files (`ref1.bed`, `ref2.bed`, and `ref3.bed`), two query BED files (`query1.bed` and `query2.bed`), the output directory `output`, and the genomic distances `100` and `1000`, the results would have the following structure:
@@ -163,6 +169,12 @@ output/
 > BED file names and genomic distances are used to name the result files. Therefore, repeated runs with the same input will lead to the overwriting of result files.
 
 The results structure comprises three parts:
+
+<details>
+
+<summary>Results structure</summary>
+
+<br>
 
 1. An individual `interelate.log` file is made, which stores all the output messages of the run, including records of the user's input choices.
 
@@ -266,3 +278,5 @@ The results structure comprises three parts:
       <li><code>pairwise_testing_result</code> reports χ² test results, adjusted p-values, and association statistics derived from reference pairs in the contingency table. In instances when the global χ² test gave an insignificant p-value, is reported as null, or pairwise testing is switched off, this section will be reported as null. Additionally, if both references in a pair show complete overlap or no overlap, results specific to that pair will be reported as null.
       </li>
     </ol>
+
+</summary>
