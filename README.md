@@ -42,8 +42,6 @@ Contributors should use an editable installation of inteRelate instead:
 
 <summary>Developer instructions</summary>
 
-<br>
-
 Clone the repository:
 
 ```bash
@@ -93,7 +91,7 @@ The `...` in the command are to be replaced by your own input. Here are your opt
 
 <summary>Argument options</summary>
 
-<dl style="margin-left: 2ch;">
+<dl>
   <dt><code>--reference_dir</code>:</dt>
   <dd>A path to a directory containing your reference BED files. At least two files must be found. Standard BED3 through BED12 files are accepted. The recognised file extensions are .bed, .bed.gz, .txt, and .txt.gz.
   </dd>
@@ -173,8 +171,6 @@ The results structure comprises three parts:
 <details>
 
 <summary>Results structure</summary>
-
-<br>
 
 1. An individual `interelate.log` file is made, which stores all the output messages of the run, including records of the user's input choices.
 
