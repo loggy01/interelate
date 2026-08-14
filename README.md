@@ -42,6 +42,8 @@ Contributors should use an editable installation of inteRelate instead:
 
 <summary>Developer instructions</summary>
 
+<br>
+
 Clone the repository:
 
 ```bash
