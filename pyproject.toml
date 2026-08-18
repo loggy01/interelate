@@ -4,8 +4,8 @@ build-backend = 'setuptools.build_meta'
 
 [project]
 name = 'interelate'
-description = 'Comparative co-localisation analysis of genome-mapped signals.'
-keywords = ['bioinformatics', 'BED', 'overlap', 'comparison', 'association']
+description = 'Relating genomic interval datasets through comparative, distance-aware overlap analysis.'
+keywords = ['bioinformatics', 'genomic intervals', 'relationship', 'comparative', 'distance-aware', 'overlap']
 version = '1.0.0.post1'
 authors = [{name = 'Aaron Mamane-Logsdon', email = 'aaron.logsdon19@imperial.ac.uk'}]
 maintainers = [{name = 'Aaron Mamane-Logsdon', email = 'aaron.logsdon19@imperial.ac.uk'}]
