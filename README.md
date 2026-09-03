@@ -115,11 +115,11 @@ The `...` in the command are to be replaced by your own input. Here are your opt
   </dd>
 
   <dt><code>--yates_correction</code>:</dt>
-  <dd>An optional value of <code>True</code> or <code>False</code> for whether to use Yates's correction in χ² and association tests. The default is <code>False</code>. It is forced to be <code>False</code> in global tests if there are more than two reference BED files.
+  <dd>An optional value of <code>True</code> or <code>False</code> for whether to use Yates' correction in χ² tests and association statistic calculations. The default is <code>False</code>. It is forced to be <code>False</code> in global tests if there are more than two reference BED files.
   </dd>
 
   <dt><code>--power_divergence_lambda</code>:</dt>
-  <dd>An optional floating point value to use as a statistic from the Cressie-Read power divergence family in place of Pearson's χ² statistic in χ² and association tests. The default is <code>None</code>.
+  <dd>An optional floating point value to use as a statistic from the Cressie-Read power divergence family in place of Pearson's χ² statistic in χ² tests and association statistic calculations. The default is <code>None</code>.
   </dd>
 
   <dt><code>--resampling_method</code>:</dt>
@@ -131,7 +131,7 @@ The `...` in the command are to be replaced by your own input. Here are your opt
   </dd>
 
   <dt><code>--pairwise_testing</code>:</dt>
-  <dd>An optional value of <code>True</code> or <code>False</code> for whether to run pairwise testing between reference BED files. The default is <code>True</code>. It is forced to be <code>False</code> if there are only two reference BED files or in the event of a non-significant global χ² test result.
+  <dd>An optional value of <code>True</code> or <code>False</code> for whether to run pairwise testing between reference BED files. The default is <code>True</code>. It is forced to be <code>False</code> if there are only two reference BED files or in the event of a non-significant global χ² test.
   </dd>
 
   <dt><code>--adjust_method</code>:</dt>
@@ -270,10 +270,10 @@ The results structure comprises three parts:
       <li><code>overlap_result</code> reports a contingency table containing, for each reference, the number of intervals that do and don't overlap with at least one query interval. Additionally, this is simplified into an overlap rate for each reference.
       </li>
 
-      <li><code>global_testing_result</code> reports a χ² test result and association statistic derived from the whole contingency table. In instances when all references show complete overlap or no overlap, tests cannot be performed and this section will be reported as null.
+      <li><code>global_testing_result</code> reports a χ² test and association statistic derived from the whole contingency table. In instances when all references show complete overlap or no overlap, tests cannot be performed and this section will be reported as null.
       </li>
 
-      <li><code>pairwise_testing_result</code> reports χ² test results, adjusted p-values, and association statistics derived from reference pairs in the contingency table. In instances when the global χ² test gave an insignificant p-value, is reported as null, or pairwise testing is switched off, this section will be reported as null. Additionally, if both references in a pair show complete overlap or no overlap, results specific to that pair will be reported as null.
+      <li><code>pairwise_testing_result</code> reports χ² tests, adjusted p-values, and association statistics derived from reference pairs within the contingency table. In instances when the global χ² test gave an insignificant p-value, is reported as null, or pairwise testing is switched off, this section will be reported as null. Additionally, if both references in a pair show complete overlap or no overlap, results specific to that pair will be reported as null.
       </li>
     </ol>
 
