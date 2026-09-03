@@ -12,7 +12,7 @@ Unit tests use real in-memory objects and real temporary files when the calculat
 
 ### `test_cli.py`
 
-Checks genomic distance filtering, output directory creation and reuse, default and non-default statistical configuration, statistical resampling method construction, incompatible statistical options, pairwise testing decisions, Yates's correction warnings, p-value adjustment method and iteration handling, CLI logging, required flags, and pipeline dispatch.
+Checks genomic distance filtering, output directory creation and reuse, default and non-default statistical configuration, statistical resampling method construction, incompatible statistical options, pairwise testing decisions, Yates' correction warnings, p-value adjustment method and iteration handling, CLI logging, required flags, and pipeline dispatch.
 
 This file does not follow the calculation-organisation-delegation structure because `cli.py` is a command-line adapter rather than a function that processes repeated combinations. Its tests inject controlled, already-parsed flag values and replace the loading and pipeline functions when checking dispatch. This isolates inteRelate's CLI decisions without retesting Abseil's command-line parser, which is exercised through the installed command by the smoke test.
 
@@ -42,7 +42,7 @@ This file follows the standard structure directly. Real overlap-count PyRanges o
 
 ### `test_run_statistical_testing.py`
 
-Checks significant, insignificant, and invalid global tests; exact statistical results; configuration forwarding; Yates's correction; valid and invalid pairwise comparisons; multiple testing adjustment; pairwise execution decisions; result organisation; and delegation across every query-distance pair.
+Checks significant, insignificant, and invalid global tests; exact statistical results; configuration forwarding; Yates' correction; valid and invalid pairwise comparisons; multiple testing adjustment; pairwise execution decisions; result organisation; and delegation across every query-distance pair.
 
 This file extends the standard structure because the production module contains global, pairwise, one-query, and all-query testing layers. Real NumPy arrays and statistical functions are used when checking scientific outcomes. Statistical functions are replaced only when checking configuration forwarding, multiple-testing input and output mapping, or delegation between layers. The tests cover each statistical layer and its possible outcomes before checking top-level organisation and delegation.
 
