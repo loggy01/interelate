@@ -1,6 +1,6 @@
 # inteRelate
 
-This package provides a full implementation of inteRelate. Here, we provide instructions that cover the installation, usage, and results of the software. For those looking to learn more about the theory and method behind inteRelate, please see our application note on [bioRxiv](https://www.biorxiv.org/content/10.64898/2026.09.14.751391v1).
+This package provides a full implementation of inteRelate. Here, we provide instructions that cover the installation, usage, and results of the software. For those looking to learn more about the theory and method behind inteRelate, please see our application note on [bioRxiv](https://www.biorxiv.org/content/10.64898/2026.09.14.751391v2).
 
 ## 1. Installation
 
